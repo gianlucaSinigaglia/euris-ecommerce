@@ -1,0 +1,292 @@
+{
+  "info": {
+    "_postman_id": "c501fdd4-0691-4996-80fc-a7916cffe7ed",
+    "name": "euris",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54726303",
+    "_collection_link": "https://go.postman.co/collection/54726303-c501fdd4-0691-4996-80fc-a7916cffe7ed?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "clienti",
+      "item": [
+        {
+          "name": "crea cliente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Gianluca\",\r\n  \"cognome\": \"Sinigaglia\",\r\n  \"dataNascita\": \"1997-06-08\",\r\n  \"codiceFiscale\": \"SNGGLC97E15H501G\",\r\n  \"email\": \"gianluca.sinigaglia@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/v1/clienti",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "clienti"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAll clienti",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Gianluca\",\r\n  \"cognome\": \"Sinigaglia\",\r\n  \"dataNascita\": \"1997-06-08\",\r\n  \"codiceFiscale\": \"SNGGLC97E15H501Z\",\r\n  \"email\": \"gianluca.sinigaglia@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/v1/clienti?page=0&size=5",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "clienti"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "prodotti",
+      "item": [
+        {
+          "name": "findAll prodotti",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Gianluca\",\r\n  \"cognome\": \"Sinigaglia\",\r\n  \"dataNascita\": \"1997-06-08\",\r\n  \"codiceFiscale\": \"SNGGLC97E15H501Z\",\r\n  \"email\": \"gianluca.sinigaglia@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/v1/prodotti?page=0&size=5",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "prodotti"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "crea prodotto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codice\": \"SMTP-002\",\r\n  \"nome\": \"Smartphone 2\",\r\n  \"stock\": 50\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/v1/prodotti",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "prodotti"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ordini",
+      "item": [
+        {
+          "name": "crea ordine",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"clienteId\": \"c64619b2-2341-498f-bd2a-0a83319f6fab\",\r\n  \"statoOrdine\": \"ORDINATO\",\r\n  \"dettagli\": [\r\n    {\r\n      \"prodottoId\": \"849ac70a-5f29-4a22-9647-4e57c10e7197\",\r\n      \"quantita\": 10\r\n    },\r\n    {\r\n      \"prodottoId\": \"02289cba-ac1c-4b2f-aee1-d7bebdc84325\",\r\n      \"quantita\": 10\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/v1/ordini",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "ordini"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "aggiorna stato ordine",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"statoOrdine\": \"CONSEGNATO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/v1/ordini/3c4a3a38-6b3d-4ed1-8987-770425d2b4b4/stato",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "ordini",
+                "3c4a3a38-6b3d-4ed1-8987-770425d2b4b4",
+                "stato"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "elimina ordine",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/v1/ordini/8075b7bc-d69b-46f6-bb40-282d9cd027a0",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "ordini",
+                "8075b7bc-d69b-46f6-bb40-282d9cd027a0"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAll ordini",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Gianluca\",\r\n  \"cognome\": \"Sinigaglia\",\r\n  \"dataNascita\": \"1997-06-08\",\r\n  \"codiceFiscale\": \"SNGGLC97E15H501Z\",\r\n  \"email\": \"gianluca.sinigaglia@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/v1/ordini?page=0&size=5",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "ordini"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
