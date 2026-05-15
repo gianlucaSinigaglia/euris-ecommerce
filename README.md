@@ -9,7 +9,7 @@
 - **Test**: JUnit 5 + Testcontainers
 
 ## Come avviare il progetto
-### Avviare il database PostgreSQL con docker-compose; il file docker-compose.yml è nella cartella README
+### Avviare il database PostgreSQL con docker-compose; il file docker-compose.yml è nella cartella config
 
 ```bash
 docker-compose up -d
@@ -23,5 +23,5 @@ docker-compose up -d
 
 ## Postman Collection
 
-Nella cartella `README` è disponibile una collection con tutte le chiamate API di test `euris.postman_collection.json`.
+Nella cartella `config` è disponibile una collection con tutte le chiamate API di test `euris.postman_collection.json`.
 Importare il file `euris.postman_collection.json` in Postman per avere a disposizione gli endpoint con delle chiamate di esempio.
